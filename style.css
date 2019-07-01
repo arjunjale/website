@@ -1,6 +1,8 @@
 :root {
   --background: rgba(255, 255, 255, .85);
   --font_color: rgb(40,40,40);
+  --primary: #f55142;
+  --secondary: #3498db;
 }
 
 *{
@@ -169,11 +171,11 @@ a.linkNav:active  {
 .one {
     width: 50%;
     height: 1000px;
-    background: red;
+    background: var(--font_color);
     float: left;
 }
 .two {
     margin-left: 50%;
     height: 1000px;
-    background: black;
+    background: white;
 }
