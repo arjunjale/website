@@ -167,15 +167,15 @@ a.linkNav:active  {
     height: 200px;
     margin: auto;
     padding-top: 9vh;
+    
 }
 .one {
     width: 50%;
-    height: 1000px;
-    background: var(--font_color);
+    background: var(--white);
     float: left;
+    padding: 70px 0;
 }
 .two {
     margin-left: 50%;
-    height: 1000px;
-    background: white;
+    background: var(--secondary);
 }
