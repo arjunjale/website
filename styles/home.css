@@ -183,7 +183,7 @@ a.linkNav:active  {
     height: 700px;
     margin: auto;
     padding-top: 9vh;
-    background: linear-gradient( rgba(110, 0, 0, 0.4), rgba(0, 99, 49, 0.4) ), url('ocean.jpg');
+    background: linear-gradient( rgba(110, 0, 0, 0.4), rgba(0, 99, 49, 0.4) ), url('/ocean.jpg');
     background-size: cover;
 }
 .banner {
@@ -197,12 +197,12 @@ a.linkNav:active  {
 }
 
 .buttonFilled {
-  background-color: white;/* clear */
+  background-color: rgba(0, 0, 0, 0.0);/* clear */
   font-family : 'Raleway', sans-serif;
   font-weight: bold;
   border: 2px solid white;
   border-radius: 8px;
-  color: var(--font_color);
+  color: white;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
@@ -217,7 +217,7 @@ a.linkNav:active  {
 .buttonFilled:hover {
   background-color: white;
   color: var(--font_color);
-  border: 2px solid var(--font_color);
+  border: 2px solid white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
@@ -241,4 +241,14 @@ a.linkNav:active  {
     background: white;
     padding-top: 70px;
     padding-right: 90px;
+}
+
+
+
+.about {
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    padding-top: 9vh;
+    
 }
