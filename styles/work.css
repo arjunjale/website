@@ -1,0 +1,329 @@
+:root {
+  --background: rgba(0, 0, 0, 0.6);
+  --font_color: rgb(255, 255, 255);
+  --secondary: #f55142;
+  --primary: #3498db;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: var(--font_color);
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: var(--background);
+  font-family: "Open Sans", sans-serif;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+.titletop {
+  font-size: 86px;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  color: var(--font_color);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 25px;
+  width: 270px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--font_color);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: regular;
+  font-size: 16px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--font_color);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1224px) {
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 9vh;
+    background: rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .titletop {
+    font-size: 56px;
+  }
+
+  .sectiontitle {
+    font-size: 25px;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.mainNav {
+  background: rgba(0, 0, 0, 0);
+}
+
+a.mainNav:link,
+a.mainNav:visited {
+  /* Applies to unvisited links of class mainNav */
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--font_color);
+}
+
+a.mainNav:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #f55142;
+}
+
+a.mainNav:active {
+  text-decoration: none;
+  font-weight: bold;
+  color: #f55142;
+}
+
+a.linkNav:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+a.linkNav:active {
+  text-decoration: none;
+  font-weight: bold;
+  color: #f55142;
+}
+
+.buttonFilled {
+  background-color: rgba(0, 0, 0, 0.55); /* clear */
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.buttonFilled:hover {
+  background-color: rgba(0, 0, 0, 0.55);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  align-content: center;
+}
+
+.buttonFilledWhite {
+  background-color: rgba(146, 146, 146, 0); /* clear */
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  border: 2px solid rgba(0, 0, 0, 1);
+  border-radius: 8px;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.buttonFilledWhite:hover {
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.85);
+  align-content: center;
+}
+
+.presentation {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  height: 80vh;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/images/programming-background.jpg");
+  background-position: center;
+  background-size: cover;
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+
+.introduction {
+  flex: 2;
+  margin: none;
+}
+.introduction2 {
+  flex: 1;
+  margin: none;
+}
+
+.first_split {
+  flex: 1;
+}
+
+.intro-text {
+  font-size: 12vh;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  margin: auto;
+}
+
+.intro-text h1 {
+  margin-top: 2%;
+  margin: auto;
+  font-size: 4vh;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-weight: 200;
+}
+
+.full-screen {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  height: 92vh;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  font-family: "Raleway", sans-serif;
+  color: black;
+}
+
+.side-title {
+  font-size: 9vh;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  font-weight: 600;
+}
+
+.side-title h1 {
+  margin-top: 2%;
+  font-size: 3vh;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  text-justify: distribute;
+  font-weight: 200;
+}
+
+.intro-text h2 {
+  margin-top: 1%;
+  font-size: 1.5vh;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-weight: 700;
+}
+
+.pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+.pic:hover {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+}

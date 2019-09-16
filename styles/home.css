@@ -1,14 +1,3 @@
-:root {
-  --background: rgb(255, 255, 255);
-  --font_color: rgb(20, 20, 20);
-  --primary: #f55142;
-  --secondary: #3498db;
-  --font: #e7dfdd;
-  --fuschia: #a239ca;
-  --jewel: #162dff;
-  --peach: #f55142;
-}
-
 * {
   margin: 0px;
   padding: 0px;
@@ -70,7 +59,7 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: var(--font_color);
+  background-color: ;
   margin: 5px;
   transition: all 0.3s ease;
 }
@@ -110,15 +99,14 @@ nav {
     display: block;
   }
 
-  .titletop {
-    font-size: 56px;
+  .intro-text {
+    font-size: 6px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  /* tablets and desktop */
   .intro-text {
-    font-size: 8vh;
+    font-size: 15px;
   }
 }
 
@@ -193,7 +181,7 @@ a.linkNav:active {
 
 .buttonFilled:hover {
   background-color: white;
-  color: var(--font_color);
+  color: rgb(70, 70, 70);
   border: 2px solid white;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
@@ -207,7 +195,7 @@ a.linkNav:active {
   height: 100vh;
   align-items: center;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
-    url("background.jpg");
+    url("/images/background.jpg");
   background-size: cover;
   font-family: "Raleway", sans-serif;
   color: white;
@@ -223,8 +211,3 @@ a.linkNav:active {
   text-align: center;
   font-weight: 600;
 }
-
-/*.intro-text p {
-  font-size: 5vh;
-  color: #585772;
-}*/
